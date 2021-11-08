@@ -13,7 +13,7 @@ app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname + '/public'));
 
-let listOfWorks = [{title: 'My Very Special Work', link: 'https://zombo.com', image: '/img/panda.jpg'}]
+let listOfWorks = [{title: 'Web Production 2', link: 'https://laikelly.github.io/web-production-2/', image:'/img/work1.png', description:'This is my portfolio for my web production 2 class.'}, {title: 'TeleVsearch', link: 'https://laikelly.github.io/web-production-2/midterm/', image:'/img/work2.png', description: 'This is an app that searches TV shows and displays details about the show.'}, {title: 'Uaena', link: 'https://fmundergrad.hunter.cuny.edu/~laik/finalproject/index.html', image: '/img/work3.png', description: 'This is a fanpage dedicated to my favorite South Korean soloist, IU.'}]
 // if you want to add your work to a partial
 // middleware to add list data to context
 app.use(function(req, res, next){
@@ -23,7 +23,7 @@ app.use(function(req, res, next){
 });
 
 
-let moreInfo = ['My favorite programming language is Python', 'My favorite food is burgers', "I was once interviewed by the New York Times About Tinder"]
+let moreInfo = ['I know a little bit of everything: HTML/CSS/JavaScript/C++/Python/Cybersecurity', 'I speak English and Chinese (Cantonese and Mandarin)', 'I enjoy watching dramas and listening to music']
 
 app.get('/', function(req, res) {
   res.render('home');
